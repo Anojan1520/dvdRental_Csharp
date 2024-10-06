@@ -88,5 +88,10 @@ namespace WebApplication1.Service
                 throw new Exception("Field is Required");
             }
         }
+        public string DeleteUser(Guid userid)
+        {
+            var data = userRepository.DeleteUser(userid);
+            return data;
+        }
     }
 }

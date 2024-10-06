@@ -115,9 +115,9 @@ namespace WebApplication1.Database
                 "; 
                 Command.ExecuteNonQuery();
                 Command.CommandText = @"
-                     IF NOT EXISTS (SELECT * FROM sys.tables where name = 'Notification')
+                     IF NOT EXISTS (SELECT * FROM sys.tables where name = 'ConfirmOrders')
                            BEGIN 
-                             CREATE TABLE Notification(
+                             CREATE TABLE ConfirmOrders(
                                 id UNIQUEIDENTIFIER PRIMARY KEY  NOT NULL,
                                 Movie NVARCHAR(20)  NOT NULL,
                                 TotalRent  INT  NOT NULL,

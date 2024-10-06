@@ -144,6 +144,21 @@ namespace WebApplication1.Repository
             return "Update Succesfully";
         }
 
+        public string DeleteUser(Guid userid)
+        {
+            using(var Connection = new SqlConnection(connectionString))
+            {
+                Connection.Open();
+                var command = Connection.CreateCommand();
+                command.CommandText = @"
+                         DELETE Users 
+                         WHERE id=@id;
+                ";
+                command.Parameters.AddWithValue("@id", userid);
+                command.ExecuteNonQuery();
+            };
+            return "Deleted SuccesFully";
+        }
 
 
 

@@ -16,7 +16,7 @@ namespace WebApplication1.Controller
             this.userService = userService;
         }
 
-        [HttpPost("Registration")]
+        [HttpPost("User")]
         public IActionResult Register(UserRequest users)
         {
             try
@@ -30,7 +30,7 @@ namespace WebApplication1.Controller
             }
         }
 
-        [HttpGet("Customers")]
+        [HttpGet("User")]
         public IActionResult GetAll()
         {
             try
@@ -43,7 +43,7 @@ namespace WebApplication1.Controller
                 return BadRequest(ex.Message);
             }
         }
-        [HttpPut("customer")]
+        [HttpPut("User")]
         public IActionResult UpdateUser(UserRequest user, Guid id)
         {
             try
@@ -54,6 +54,20 @@ namespace WebApplication1.Controller
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("User")]
+        public IActionResult DeleteUser(Guid id)
+        {
+            try
+            {
+                var data = userService.DeleteUser(id);
+                return Ok(data);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message) ;
             }
         }
     }
