@@ -1,7 +1,8 @@
 ﻿using WebApplication1.DTO.Request;
 using WebApplication1.DTO.Response;
+using WebApplication1.IRepositroy;
+using WebApplication1.IService;
 using WebApplication1.Modals;
-using WebApplication1.Repository;
 
 namespace WebApplication1.Service
 {

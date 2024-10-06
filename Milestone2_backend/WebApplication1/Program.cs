@@ -1,6 +1,8 @@
 
 using WebApplication1.Controller;
 using WebApplication1.Database;
+using WebApplication1.IRepositroy;
+using WebApplication1.IService;
 using WebApplication1.Repository;
 using WebApplication1.Service;
 

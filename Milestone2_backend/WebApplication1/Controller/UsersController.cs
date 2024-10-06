@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.DTO.Request;
-using WebApplication1.Service;
+using WebApplication1.IService;
 
 namespace WebApplication1.Controller
 {

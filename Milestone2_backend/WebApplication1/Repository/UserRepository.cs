@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Data.SqlClient;
+using WebApplication1.IRepositroy;
 using WebApplication1.Modals;
 
 namespace WebApplication1.Repository
