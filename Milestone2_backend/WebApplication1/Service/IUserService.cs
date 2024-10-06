@@ -7,5 +7,6 @@ namespace WebApplication1.Service
     {
         string Register(UserRequest user);
         IEnumerable<UsersResponse> GetAllUser();
+        string UpdateUser(UserRequest user, Guid id);
     }
 }

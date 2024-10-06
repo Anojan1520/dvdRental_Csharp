@@ -112,6 +112,37 @@ namespace WebApplication1.Repository
             }
         }
 
+        public string UpdateUser(Users user)
+        {
+            using (var Connection = new SqlConnection(connectionString))
+            {
+                Connection.Open();
+
+                var command = Connection.CreateCommand();
+                command.CommandText = @"
+                        UPDATE Users
+                        SET firstname=@firstname , 
+                           username=@username ,
+                           position=@position, 
+                           password=@password,
+                           nic=@nic,
+                           phone=@phone,
+                           email=@email
+                        WHERE id=@id
+            ";
+                command.Parameters.AddWithValue("@firstname", user.firstname);
+                command.Parameters.AddWithValue("@username", user.username);
+                command.Parameters.AddWithValue("@position", user.position);
+                command.Parameters.AddWithValue("@password", user.password);
+                command.Parameters.AddWithValue("@nic", user.nic);
+                command.Parameters.AddWithValue("@phone", user.phone);
+                command.Parameters.AddWithValue("@email", user.email);
+                command.Parameters.AddWithValue("@id", user.id);
+
+                command.ExecuteNonQuery();
+            }
+            return "Update Succesfully";
+        }
 
 
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\gitPractice\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\06-10Milestone_backend\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "D:\\gitPractice\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\06-10Milestone_backend\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\gitPractice\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\06-10Milestone_backend\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "D:\\gitPractice\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "D:\\06-10Milestone_backend\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\gitPractice\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "D:\\06-10Milestone_backend\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

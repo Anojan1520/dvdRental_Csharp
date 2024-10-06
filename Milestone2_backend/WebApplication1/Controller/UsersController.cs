@@ -43,5 +43,18 @@ namespace WebApplication1.Controller
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPut("customer")]
+        public IActionResult UpdateUser(UserRequest user, Guid id)
+        {
+            try
+            {
+                var data = userService.UpdateUser(user, id);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

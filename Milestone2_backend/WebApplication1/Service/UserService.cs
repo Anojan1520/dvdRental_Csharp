@@ -63,5 +63,30 @@ namespace WebApplication1.Service
             return Obj;
 
         }
+
+        public string UpdateUser(UserRequest user, Guid id)
+        {
+            if (user != null)
+            {
+                var ReqUser = new Users
+                {
+                    id = id,
+                    position = user.position,
+                    firstname = user.firstname,
+                    username = user.username,
+                    password = user.password,
+                    phone = user.phone,
+                    email = user.email,
+                    nic = user.nic,
+
+                };
+                var data = userRepository.UpdateUser(ReqUser);
+                return data;
+            }
+            else
+            {
+                throw new Exception("Field is Required");
+            }
+        }
     }
 }
