@@ -5,5 +5,6 @@ namespace WebApplication1.IRepository
     public interface INotificationRepository
     {
         string AddNotification(Notifications notifications);
+        List<Notifications> GetNotifications();
     }
 }

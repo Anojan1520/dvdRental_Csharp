@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ut01265\\Desktop\\CSharp\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
+    "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ut01265\\Desktop\\CSharp\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
+    "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ut01265\\Desktop\\CSharp\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\ut01265\\Desktop\\CSharp\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\ut01265\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ut01265\\Desktop\\CSharp\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
+        "outputPath": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ut01265\\AppData\\Roaming\\NuGet\\NuGet.Config",

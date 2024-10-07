@@ -36,6 +36,41 @@ namespace WebApplication1.Repository
             }
             return "Notification save Successfully..";
         }
+
+
+        public List<Notifications> GetNotifications()
+        {
+            using(var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText  = @"SELECT id, RentedId, RentedQuantity, movieId, UserId, RequestDate, Status FROM  Notification";
+                var notifications = new List<Notifications>();
+                using(var reader  = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var obj = new Notifications
+                        {
+                            id = reader.GetGuid(0),
+                            RentedId = reader.GetGuid(1),
+                            RentedQuantity = reader.GetInt32(2),
+                            movieId = reader.GetGuid(3),
+                            UserId = reader.GetGuid(4),
+                            RequestDate = reader.GetString(5),
+                            Status = reader.GetString(6)
+                        };
+
+                        notifications.Add(obj);
+
+                    };
+
+                    return notifications;
+                }
+
+
+            }
+        }
     }
 
 }
