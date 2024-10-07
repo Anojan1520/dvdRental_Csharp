@@ -1,6 +1,7 @@
 
 using WebApplication1.Controller;
 using WebApplication1.Database;
+using WebApplication1.IRepository;
 using WebApplication1.IRepositroy;
 using WebApplication1.IService;
 using WebApplication1.Repository;
@@ -28,6 +29,13 @@ namespace WebApplication1
 
             builder.Services.AddSingleton<IUserRepository>(provider => new UserRepository(connectionString));
             builder.Services.AddSingleton<IUserService>(provider => new UserService(provider.GetRequiredService<IUserRepository>()));
+
+            builder.Services.AddSingleton<INotificationRepository>(provider => new NotificationRepository(connectionString));
+            builder.Services.AddSingleton<INotificationService>(provider => new NotificationService(provider.GetRequiredService<INotificationRepository>()));
+
+            builder.Services.AddSingleton<IConfirmOrderRepository>(provider => new ConfirmOrderRepository(connectionString));
+            builder.Services.AddSingleton<IConfirmOrderService>(provider => new ConfirmOrderService(provider.GetRequiredService<IConfirmOrderRepository>()));
+
 
             // Add services to the container.
 

@@ -67,6 +67,7 @@ namespace WebApplication1.Database
                                END
                 ";
                 Command.ExecuteNonQuery();
+
                 Command.CommandText = @"
                   IF NOT EXISTS (SELECT * FROM sys.tables where name = 'RentedItems' )
                     BEGIN
@@ -80,6 +81,7 @@ namespace WebApplication1.Database
                     END
                 ";
                 Command.ExecuteNonQuery();
+
                 Command.CommandText = @"
                    IF NOT EXISTS (SELECT * FROM sys.tables where name = 'Orders')
                          BEGIN 
@@ -97,6 +99,7 @@ namespace WebApplication1.Database
                          END
                 ";
                 Command.ExecuteNonQuery();
+
                 Command.CommandText = @"
                    IF NOT EXISTS (SELECT * FROM sys.tables where name = 'Notification')
                            BEGIN 
@@ -114,6 +117,7 @@ namespace WebApplication1.Database
                           END
                 "; 
                 Command.ExecuteNonQuery();
+
                 Command.CommandText = @"
                      IF NOT EXISTS (SELECT * FROM sys.tables where name = 'ConfirmOrders')
                            BEGIN 
