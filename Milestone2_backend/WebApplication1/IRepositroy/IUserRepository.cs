@@ -4,9 +4,10 @@ namespace WebApplication1.IRepositroy
 {
     public interface IUserRepository
     {
-        string Register(Users user);
-        IEnumerable<Users> GetAll();
-        string UpdateUser(Users user);
-        string DeleteUser(Guid userid);
+        Task<string> Register(Users user);
+        Task<List<Users>> GetAll();
+        Task<Users> GetByUserName(string UserName);
+        Task<string> UpdateUser(Users user);
+        Task<string> DeleteUser(Guid userid);
     }
 }

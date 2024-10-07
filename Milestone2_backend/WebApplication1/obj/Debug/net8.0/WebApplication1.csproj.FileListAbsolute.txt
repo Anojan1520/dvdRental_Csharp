@@ -232,3 +232,4 @@ X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\n
 X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+D:\milestone2_backend_DvdRentsl\dvdRental_Csharp\Milestone2_backend\WebApplication1\bin\Debug\net8.0\BCrypt.Net-Next.dll

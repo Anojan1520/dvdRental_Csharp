@@ -15,22 +15,23 @@ namespace WebApplication1.Service
             this.userRepository = userRepository;
         }
 
-        public string Register(UserRequest user)
+        public async Task<string> Register(UserRequest user)
         {
             if (user != null)
             {
+                var HashPass = HashPassword(user.password);
                 var obj = new Users
                 {
                     position = user.position,
                     firstname = user.firstname,
                     username = user.username,
-                    password = user.password,
+                    password = HashPass,
                     phone = user.phone,
                     email = user.email,
                     nic = user.nic,
                 };
 
-                var ReturnData = userRepository.Register(obj);
+                var ReturnData = await userRepository.Register(obj);
 
                 return ReturnData;
             }
@@ -40,10 +41,10 @@ namespace WebApplication1.Service
             }
 
         }
-        public IEnumerable<UsersResponse> GetAllUser()
+        public async Task<List<UsersResponse>> GetAllUser()
         {
 
-            var data = userRepository.GetAll();
+            var data = await userRepository.GetAll();
 
             var Obj = new List<UsersResponse>();
             foreach (var user in data)
@@ -65,7 +66,7 @@ namespace WebApplication1.Service
 
         }
 
-        public string UpdateUser(UserRequest user, Guid id)
+        public async Task<string> UpdateUser(UserRequest user, Guid id)
         {
             if (user != null)
             {
@@ -81,7 +82,7 @@ namespace WebApplication1.Service
                     nic = user.nic,
 
                 };
-                var data = userRepository.UpdateUser(ReqUser);
+                var data = await userRepository.UpdateUser(ReqUser);
                 return data;
             }
             else
@@ -89,10 +90,16 @@ namespace WebApplication1.Service
                 throw new Exception("Field is Required");
             }
         }
-        public string DeleteUser(Guid userid)
+        public async Task<string> DeleteUser(Guid userid)
         {
-            var data = userRepository.DeleteUser(userid);
+            var data = await userRepository.DeleteUser(userid);
             return data;
         }
+
+        public string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
     }
 }

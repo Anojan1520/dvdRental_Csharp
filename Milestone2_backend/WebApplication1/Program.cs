@@ -36,6 +36,8 @@ namespace WebApplication1
             builder.Services.AddSingleton<IConfirmOrderRepository>(provider => new ConfirmOrderRepository(connectionString));
             builder.Services.AddSingleton<IConfirmOrderService>(provider => new ConfirmOrderService(provider.GetRequiredService<IConfirmOrderRepository>()));
 
+            builder.Services.AddSingleton<ILoginRepository>(provider => new LoginRepository(connectionString));
+            builder.Services.AddSingleton<ILoginService>(provider => new LoginService(provider.GetRequiredService<ILoginRepository>(),provider.GetRequiredService<IUserRepository>()));
 
             // Add services to the container.
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
+    "D:\\milestone2_backend_DvdRentsl\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
+    "D:\\milestone2_backend_DvdRentsl\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "D:\\milestone2_backend_DvdRentsl\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
-        "packagesPath": "C:\\Users\\ut01265\\.nuget\\packages\\",
-        "outputPath": "X:\\Clone_BackEnd\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
+        "projectPath": "D:\\milestone2_backend_DvdRentsl\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "D:\\milestone2_backend_DvdRentsl\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ut01265\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,14 +15,14 @@ namespace WebApplication1.Repository
             this.connectionString = connectionString;
         }
 
-        public string Register(Users user)
+        public async Task<string> Register(Users user)
         {
-            var CheckUserName = GetByUserName(user.username);
+            var CheckUserName =await GetByUserName(user.username);
             if (CheckUserName == null)
             {
                 using (var connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();
+                    await connection.OpenAsync();
                     var command = connection.CreateCommand();
                     command.CommandText = @"INSERT INTO Users(id,position,firstname,username,password,nic,phone,email)
                                         VALUES(@id,@position,@firstname,@username,@password,@nic,@phone,@email)";
@@ -35,7 +35,7 @@ namespace WebApplication1.Repository
                     command.Parameters.AddWithValue("@phone", user.phone);
                     command.Parameters.AddWithValue("@email", user.email);
 
-                    command.ExecuteNonQuery();
+                  await command.ExecuteNonQueryAsync();
                 }
                 return ("Registration Successfull..");
 
@@ -49,11 +49,11 @@ namespace WebApplication1.Repository
 
         }
 
-        public Users GetByUserName(string UserName)
+        public async Task<Users> GetByUserName(string UserName)
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                connection.Open();
+                await connection.OpenAsync();
                 var command = connection.CreateCommand();
                 command.CommandText = @"Select * from Users
                                       where Users.username=  @UserName";
@@ -81,15 +81,15 @@ namespace WebApplication1.Repository
         }
 
 
-        public IEnumerable<Users> GetAll()
+        public async Task<List<Users>> GetAll()
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                connection.Open();
+                await connection.OpenAsync();
                 var command = connection.CreateCommand();
                 command.CommandText = @"SELECT id , firstname , username , position , password,nic,phone,email FROM Users";
                 var users = new List<Users>();
-                using (var Reader = command.ExecuteReader())
+                using (var Reader = await command.ExecuteReaderAsync())
                 {
                     while (Reader.Read())
                     {
@@ -113,11 +113,11 @@ namespace WebApplication1.Repository
             }
         }
 
-        public string UpdateUser(Users user)
+        public async Task<string> UpdateUser(Users user)
         {
             using (var Connection = new SqlConnection(connectionString))
             {
-                Connection.Open();
+                await Connection.OpenAsync();
 
                 var command = Connection.CreateCommand();
                 command.CommandText = @"
@@ -140,23 +140,23 @@ namespace WebApplication1.Repository
                 command.Parameters.AddWithValue("@email", user.email);
                 command.Parameters.AddWithValue("@id", user.id);
 
-                command.ExecuteNonQuery();
+                await command.ExecuteNonQueryAsync();
             }
             return "Update Succesfully";
         }
 
-        public string DeleteUser(Guid userid)
+        public async Task<string> DeleteUser(Guid userid)
         {
             using(var Connection = new SqlConnection(connectionString))
             {
-                Connection.Open();
+                await Connection.OpenAsync();
                 var command = Connection.CreateCommand();
                 command.CommandText = @"
                          DELETE Users 
                          WHERE id=@id;
                 ";
                 command.Parameters.AddWithValue("@id", userid);
-                command.ExecuteNonQuery();
+             await command.ExecuteNonQueryAsync();
             };
             return "Deleted SuccesFully";
         }

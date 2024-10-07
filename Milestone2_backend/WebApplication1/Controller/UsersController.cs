@@ -17,11 +17,11 @@ namespace WebApplication1.Controller
         }
 
         [HttpPost("User")]
-        public IActionResult Register(UserRequest users)
+        public async Task<IActionResult> Register(UserRequest users)
         {
             try
             {
-                var ReturnData = userService.Register(users);
+                var ReturnData = await userService.Register(users);
                 return Ok(ReturnData);
             }
             catch (Exception ex)
@@ -31,11 +31,11 @@ namespace WebApplication1.Controller
         }
 
         [HttpGet("User")]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                var data = userService.GetAllUser();
+                var data =await userService.GetAllUser();
                 return Ok(data);
             }
             catch (Exception ex)
@@ -44,11 +44,11 @@ namespace WebApplication1.Controller
             }
         }
         [HttpPut("User")]
-        public IActionResult UpdateUser(UserRequest user, Guid id)
+        public async Task<IActionResult> UpdateUser(UserRequest user, Guid id)
         {
             try
             {
-                var data = userService.UpdateUser(user, id);
+                var data = await userService.UpdateUser(user, id);
                 return Ok(data);
             }
             catch (Exception ex)
@@ -58,11 +58,11 @@ namespace WebApplication1.Controller
         }
 
         [HttpDelete("User")]
-        public IActionResult DeleteUser(Guid id)
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
             try
             {
-                var data = userService.DeleteUser(id);
+                var data =await userService.DeleteUser(id);
                 return Ok(data);
             }
             catch(Exception ex)

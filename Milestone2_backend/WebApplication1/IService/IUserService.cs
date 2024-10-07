@@ -5,9 +5,9 @@ namespace WebApplication1.IService
 {
     public interface IUserService
     {
-        string Register(UserRequest user);
-        IEnumerable<UsersResponse> GetAllUser();
-        string UpdateUser(UserRequest user, Guid id);
-        string DeleteUser(Guid userid);
+        Task<string> Register(UserRequest user);
+        Task<List<UsersResponse>> GetAllUser();
+        Task<string> UpdateUser(UserRequest user, Guid id);
+        Task<string> DeleteUser(Guid userid);
     }
 }
