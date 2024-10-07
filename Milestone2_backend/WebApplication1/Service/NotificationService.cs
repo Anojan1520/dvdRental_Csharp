@@ -1,4 +1,5 @@
 ﻿using WebApplication1.DTO.Request;
+using WebApplication1.DTO.Response;
 using WebApplication1.IRepository;
 using WebApplication1.IService;
 using WebApplication1.Modals;
@@ -32,6 +33,11 @@ namespace WebApplication1.Service
             return ReturnData;
 
         }
+
+        public List<NotificationResponse> GetNotifications()
+        {
+
+        };
     }
 }
 
