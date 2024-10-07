@@ -126,8 +126,8 @@ namespace WebApplication1.Database
                                 Movie NVARCHAR(20)  NOT NULL,
                                 TotalRent  INT  NOT NULL,
                                 UserId UNIQUEIDENTIFIER  NOT NULL,
-                                RentedDate DATE  NOT NULL,
-                                ReturnDate DATE  NOT NULL,
+                                RentedDate NVARCHAR(30)  NOT NULL,
+                                ReturnDate NVARCHAR(30)   NOT NULL,
                                 MovieId UNIQUEIDENTIFIER  NOT NULL,
                          CONSTRAINT  FK_ConfirmOrders_Movies FOREIGN KEY (MovieId) REFERENCES  Movies(id),
                          CONSTRAINT  FK_ConfirmOrders_Users FOREIGN KEY (UserId) REFERENCES  Users(id)

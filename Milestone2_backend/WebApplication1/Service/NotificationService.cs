@@ -19,8 +19,8 @@ namespace WebApplication1.Service
         {
             var obj = new Notifications
             {
-                rentedId = notification.rentedId,
-                rentedQuantity = notification.rentedQuantity,
+                RentedId = notification.RentedId,
+                RentedQuantity = notification.RentedQuantity,
                 movieId = notification.movieId,
                 UserId = notification.UserId,
                 RequestDate = notification.RequestDate,

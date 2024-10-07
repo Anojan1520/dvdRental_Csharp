@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿
+using System.Data.SqlClient;
 using WebApplication1.IRepository;
 using WebApplication1.Modals;
 
@@ -20,11 +21,11 @@ namespace WebApplication1.Repository
                 connection.Open();
                 var command = connection.CreateCommand();
                 command.CommandText = @"
-                            INSERT INTO Notifications(id, rentedId, rentedQuantity, movieId, UserId, RequestDate, Status) 
-                            VALUES(@id, @rentedId, @rentedQuantity, @movieId, @UserId, @RequestDate, @Status)";
+                            INSERT INTO Notification(id, RentedId, RentedQuantity, movieId, UserId, RequestDate, Status) 
+                            VALUES(@id, @RentedId, @RentedQuantity, @movieId, @UserId, @RequestDate, @Status)";
                 command.Parameters.AddWithValue("@id", Guid.NewGuid());
-                command.Parameters.AddWithValue("@rentedId", notifications.rentedId);
-                command.Parameters.AddWithValue("@rentedQuantity", notifications.rentedQuantity);
+                command.Parameters.AddWithValue("@RentedId", notifications.RentedId);
+                command.Parameters.AddWithValue("@RentedQuantity", notifications.RentedQuantity);
                 command.Parameters.AddWithValue("@movieId", notifications.movieId);
                 command.Parameters.AddWithValue("@UserId", notifications.UserId);
                 command.Parameters.AddWithValue("@RequestDate", notifications.RequestDate);
@@ -36,4 +37,5 @@ namespace WebApplication1.Repository
             return "Notification save Successfully..";
         }
     }
+
 }
