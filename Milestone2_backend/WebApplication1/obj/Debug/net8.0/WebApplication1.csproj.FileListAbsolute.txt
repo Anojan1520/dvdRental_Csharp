@@ -233,6 +233,19 @@ X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\n
 X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 X:\Clone_BackEnd\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
 D:\milestone2_backend_DvdRentsl\dvdRental_Csharp\Milestone2_backend\WebApplication1\bin\Debug\net8.0\BCrypt.Net-Next.dll
+<<<<<<< HEAD
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfoInputs.cache
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.AssemblyInfo.cs
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.dll
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\refint\WebApplication1.dll
+C:\Users\UT03213\Desktop\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
+=======
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\bin\Debug\net8.0\appsettings.json
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\bin\Debug\net8.0\WebApplication1.exe
@@ -273,3 +286,4 @@ C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplic
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.pdb
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\WebApplication1.genruntimeconfig.cache
 C:\Users\ut01265\Desktop\GitCommit\dvdRental_Csharp\Milestone2_backend\WebApplication1\obj\Debug\net8.0\ref\WebApplication1.dll
+>>>>>>> fc5779dfab02d22043aad47f00b58e682b12793c

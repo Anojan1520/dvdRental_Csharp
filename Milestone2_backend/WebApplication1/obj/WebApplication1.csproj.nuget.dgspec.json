@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\UT03213\\Desktop\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\UT03213\\Desktop\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\UT03213\\Desktop\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "projectName": "WebApplication1",
+        "projectPath": "C:\\Users\\UT03213\\Desktop\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj",
+        "packagesPath": "C:\\Users\\UT03213\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\UT03213\\Desktop\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\UT03213\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "C:\\Users\\ut01265\\Desktop\\GitCommit\\dvdRental_Csharp\\Milestone2_backend\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ut01265\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> fc5779dfab02d22043aad47f00b58e682b12793c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

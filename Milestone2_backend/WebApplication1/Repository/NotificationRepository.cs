@@ -67,6 +67,8 @@ namespace WebApplication1.Repository
 
                     return notifications;
                 }
+<<<<<<< HEAD
+=======
             }
         }
 
@@ -117,9 +119,9 @@ namespace WebApplication1.Repository
 
                 command.ExecuteNonQuery();
 
+>>>>>>> fc5779dfab02d22043aad47f00b58e682b12793c
             }
             return "Notification Updated Successfully..";
         }
     }
-
 }
