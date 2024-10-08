@@ -67,10 +67,7 @@ namespace WebApplication1.Repository
 
                     return notifications;
                 }
-
-
             }
         }
     }
-
 }

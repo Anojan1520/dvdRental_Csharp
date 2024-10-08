@@ -39,6 +39,11 @@ namespace WebApplication1
             builder.Services.AddSingleton<ILoginRepository>(provider => new LoginRepository(connectionString));
             builder.Services.AddSingleton<ILoginService>(provider => new LoginService(provider.GetRequiredService<ILoginRepository>(),provider.GetRequiredService<IUserRepository>()));
 
+            builder.Services.AddSingleton<IOrdersRepository>(provider => new  OrdersRepository(connectionString));
+            builder.Services.AddSingleton<IOrdersService>(provider => new OrdersService(provider.GetRequiredService<IOrdersRepository>()));
+            
+            builder.Services.AddSingleton<IRentedItemsRepository>(provider => new  RentedItemsRepository(connectionString));
+            builder.Services.AddSingleton<IRentedItemsService>(provider => new RentedItemsService(provider.GetRequiredService<IRentedItemsRepository>()));
             // Add services to the container.
 
             builder.Services.AddControllers();
