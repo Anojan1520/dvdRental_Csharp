@@ -6,5 +6,7 @@ namespace WebApplication1.IRepository
     {
         string AddNotification(Notifications notifications);
         List<Notifications> GetNotifications();
+        string DeleteNotification(Guid notificationId);
+        string UpdateNotification(Notifications notifications);
     }
 }
