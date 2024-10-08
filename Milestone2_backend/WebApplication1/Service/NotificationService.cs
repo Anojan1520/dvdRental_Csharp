@@ -15,7 +15,7 @@ namespace WebApplication1.Service
         {
             _notificationRepository = notificationRepository;
         }
-        
+
         public string AddNotification(NotificationRequest notification)
         {
             var obj = new Notifications
@@ -34,7 +34,55 @@ namespace WebApplication1.Service
 
         }
 
-       
+        public List<NotificationResponse> GetNotifications()
+        {
+            var data = _notificationRepository.GetNotifications();
+            var listresponse = new List<NotificationResponse>();
+            foreach (var item in data)
+            {
+                var response = new NotificationResponse()
+                {
+                    id = item.id,
+                    RentedId = item.RentedId,
+                    RentedQuantity = item.RentedQuantity,
+                    movieId = item.movieId,
+                    UserId = item.UserId,
+                    RequestDate = item.RequestDate,
+                    Status = item.Status
+
+                };
+                listresponse.Add(response);
+
+
+            };
+            return listresponse;
+
+        }
+
+
+        public string DeleteNotification(Guid notificationId)
+        {
+            var data = _notificationRepository.DeleteNotification(notificationId);
+            return data;
+        }
+
+        public string UpdateNotification(NotificationRequest notificationRequest, Guid notificationId)
+        {
+            var requestdata = new Notifications
+            {
+                id = notificationId,
+                RentedId = notificationRequest.RentedId,
+                RentedQuantity = notificationRequest.RentedQuantity,
+                movieId = notificationRequest.movieId,
+                UserId = notificationRequest.UserId,
+                RequestDate = notificationRequest.RequestDate,
+                Status = notificationRequest.Status
+            };
+
+            var data = _notificationRepository.UpdateNotification(requestdata);
+            return data;
+        }
+
     }
 }
 
