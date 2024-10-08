@@ -16,7 +16,7 @@ namespace WebApplication1.Repository
 
         public string AddNotification(Notifications notifications)
         {
-            using(var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var command = connection.CreateCommand();
@@ -40,13 +40,13 @@ namespace WebApplication1.Repository
 
         public List<Notifications> GetNotifications()
         {
-            using(var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 var command = connection.CreateCommand();
-                command.CommandText  = @"SELECT id, RentedId, RentedQuantity, movieId, UserId, RequestDate, Status FROM  Notification";
+                command.CommandText = @"SELECT * FROM  Notification";
                 var notifications = new List<Notifications>();
-                using(var reader  = command.ExecuteReader())
+                using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
@@ -67,7 +67,61 @@ namespace WebApplication1.Repository
 
                     return notifications;
                 }
+<<<<<<< HEAD
+=======
             }
+        }
+
+
+
+        public string DeleteNotification(Guid notificationId)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+                                        DELETE Notification
+                                        WHERE id = @id";
+
+                command.Parameters.AddWithValue("@id", notificationId);
+                command.ExecuteNonQuery();
+            }
+            return "Notification Deleted SuccessFully...";
+        }
+
+
+        public string UpdateNotification(Notifications notifications)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+                                        UPDATE Notification
+                                        SET  RentedId=@RentedId, 
+                                        RentedQuantity = @RentedQuantity, 
+                                        movieId = @movieId, 
+                                        UserId = @UserId, 
+                                        RequestDate = @RequestDate, 
+                                        Status = @Status
+                                        WHERE id = @id ";
+
+
+                command.Parameters.AddWithValue("@RentedId", notifications.RentedId);
+                command.Parameters.AddWithValue("@RentedQuantity", notifications.RentedQuantity);
+                command.Parameters.AddWithValue("@movieId", notifications.movieId);
+                command.Parameters.AddWithValue("@UserId", notifications.UserId);
+                command.Parameters.AddWithValue("@RequestDate", notifications.RequestDate);
+                command.Parameters.AddWithValue("@Status", notifications.Status);
+                command.Parameters.AddWithValue("@id", notifications.id);
+
+
+                command.ExecuteNonQuery();
+
+>>>>>>> fc5779dfab02d22043aad47f00b58e682b12793c
+            }
+            return "Notification Updated Successfully..";
         }
     }
 }
